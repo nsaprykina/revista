@@ -1,0 +1,663 @@
+@font-face {
+    font-family: "Hind";
+    font-weight: 300;
+    font-style: normal;
+    src: local("Hind"),
+        url("../fonts/Hind-Light.woff2") format("woff2"),
+        url("../fonts/Hind-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Hind";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Hind"),
+        url("../fonts/Hind-Regular.woff2") format("woff2"),
+        url("../fonts/Hind-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    src: local("Montserrat"),
+        url("../fonts/Montserrat-Light.woff2") format("woff2"),
+        url("../fonts/Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Montserrat"),
+        url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    src: local("Montserrat"),
+        url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+        url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-style: italic;
+    src: local("Rlayfair Display"),
+        url("../fonts/PlayfairDisplay-Italic.woff2") format("woff2"),
+        url("../fonts/PlayfairDisplay-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-style: italic;
+    src: local("Rlayfair Display"),
+        url("../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2"),
+        url("../fonts/PlayfairDisplay-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    font-weight: 900;
+    font-style: italic;
+    src: local("Rlayfair Display"),
+        url("../fonts/PlayfairDisplay-BlackItalic.woff2") format("woff2"),
+        url("../fonts/PlayfairDisplay-BlackItalic.woff") format("woff");
+}
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Hind', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #6c6c6c;
+}
+
+body {
+    background-color: #ffffff;
+    width: 1920px;
+    margin: 0 auto;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.wrapper {
+    padding: 0 150px;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.title {
+    font-size: 1.875em;
+    line-height: 1.500em;
+    font-weight: 600;
+    color: #222222;
+    text-transform: uppercase;
+    position: relative;
+    padding-top: 110px;
+}
+
+.title::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 70px;
+    background-color: #2f2f2f;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+/* header */
+
+.header {
+    padding-top: 119px;
+    padding-bottom: 95px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.header__text-logo {
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 1.500em;
+    line-height: 1.500em;
+    color: #222222;
+}
+
+.header__nav {
+    order: -1;
+    width: 44px;
+    height: 33px;
+}
+
+.header__menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.header__line {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: #222222;
+}
+
+.header__line::before,
+.header__line::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: #222222;
+    position: absolute;    
+}
+
+.header__line::before {
+    top: 0;
+    left: 0;
+}
+
+.header__line::after {
+    right: 0;
+    bottom: 0;
+}
+
+/* page */
+
+.page {
+    background: 
+        url("../img/background-page-number.png")top right no-repeat,
+        url("../img/background-page.png") right bottom no-repeat;
+    padding-top: 60px;
+    position: relative;
+}
+
+.page__title {
+    font-size: 1.875em;
+    line-height: 1.500em;
+    font-weight: 800;
+    color:#222222;
+    text-transform: uppercase;
+    padding-left: 190px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.page__title::before {
+    content: "";
+    display: inline-block;
+    width: 129px;
+    height: 3px;
+    background-color: #222222;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.page__text {
+    font-size: 1.250em;
+    line-height: 1.500em;
+    color: #95cac5;
+    text-transform: uppercase;
+    padding-left: 190px;
+    margin-bottom: 100px;
+}
+
+.page__button {
+    background-color: #95cac5;
+    border: none;
+    padding: 23px 45px 22px 50px;
+    float: right;
+    cursor: pointer;
+}
+
+.page__photos {
+    min-height: 920px;
+    background: 
+        url("../img/Img-1.png") top 18px left -53px no-repeat,
+        url("../img/Img-4.png") top 50% right -53px no-repeat,
+        url("../img/Img-2.png") top 143px left 250px no-repeat,
+        url("../img/img-3.png") top -23px right 315px no-repeat;
+    text-align: center;
+    vertical-align: middle;
+        
+}
+
+.page__info {
+    font-family: "Playfair Display", serif;
+    font-size: 4.750em;
+    line-height: 6.250em;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    top: 100px;
+    left: 205px;
+}
+
+.page__info span {
+    position: relative;
+    top: 105px;
+    left: -320px;
+}
+
+.page__contacts {
+    position: absolute;
+    left: 60px;
+    bottom: 24%;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+
+.page__tel,
+.page__email {
+    font-size: 1.313em;
+    line-height: 2.125em;
+    text-transform: lowercase;
+    color: #333333;
+    text-decoration: none;
+}
+
+.page__tel {
+    margin-right: 60px;
+}
+
+/* gallery */
+
+.gallery {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.gallery__wrapper {
+    padding: 0 364px 0 290px;
+}
+
+.gallery__title {
+    margin-bottom: 20px;
+}
+
+.gallery__text {
+    font-family: "Playfair Display", serif;
+    font-size: 1.063em;
+    line-height: 1.500em;
+    font-weight: 700;
+    font-style: italic;
+    color: #95cac5;
+    margin-bottom: 70px;
+}
+
+.gallery__photo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gallery__item {
+    text-align: left;
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.gallery__info {
+    margin-top: 45px;
+    font-size: 1.125em;
+    line-height: 1.500em;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.gallery__name {
+    font-size: 0.875em;
+    line-height: 1.500em;
+    color:#333333;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+.gallery__name--left {
+    top: 26%;
+    left: -50px;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+
+.gallery__name span {
+    color: #95cac5;
+    margin-left: 25px;
+}
+
+.gallery__line-1 {
+    height: 3px;
+    background-color: #ececec;
+    border: none;
+    margin: 0;
+    margin-top: 65px;
+}
+
+.gallery__name--right-1 {
+    top: 0;
+    right: -227px;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+}
+
+.gallery__line-2 {
+    height: 3px;
+    background-color: #ececec;
+    border: none;
+    margin: 0;
+    margin-bottom: 80px;
+}
+
+.gallery__name--left-2 {
+    top: 37%;
+}
+
+.gallery__name--right-2 {
+    top: 0;
+    right: -285px;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+}
+
+/* subscribe */
+
+.subscribe {
+    padding-top: 75px;
+    padding-bottom: 90px;
+    background-image:  url("../img/background-subscribe.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.subscribe__title {
+    font-size: 1.375em;
+    line-height: 2.500em;
+    font-weight: 600;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.subscribe__text {
+    font-family: "Playfair Display", serif;
+    font-size: 1em;
+    line-height: 1.875em;
+    font-weight: 400;
+    font-style: italic;
+    color: #555555;
+}
+
+.subscribe__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.subscribe__input {
+    padding: 23px 31px 22px;
+    border: none;
+    width: 510px;
+    font-family: "Hind", "Arial", sans-serif;
+    line-height: 1.875em;
+    color: rgb(119, 119, 119);
+}
+
+.subscribe__button {
+    padding: 28px 19px 27px 20px;
+    background-color: #83bbb6;
+    border: none;
+    cursor: pointer;
+}
+
+/* news */
+
+.news {
+    text-align: center;
+    padding-bottom: 143px;
+}
+
+.news__wrapper {
+    padding: 0 346px;
+}
+
+.news__title {
+    margin-bottom: 50px;
+}
+
+.news__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    width: 367px;
+    text-align: left;
+    box-shadow: 0px 5px 21px 0px rgba(0, 0, 0, 0.04);
+}
+
+.news__info {
+    padding: 30px 30px 42px;
+}
+
+.news__caption {
+    font-size: 1.125em;
+    line-height: 2.000em;
+    color: rgb(34, 34, 34);
+    margin-bottom: 10px;
+}
+
+.news__text {
+    font-family: "Hind", "Arial", sans-serif;
+    line-height: 1.625em;
+    font-weight: 300;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+.news__link {
+    font-size: 1.063em;
+    line-height: 1.625em;
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
+.news__link span {
+    margin-left: 28px;
+}
+
+/* video */
+
+.video {
+    background-color: #f8f8f8;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.video__wrapper {
+    padding: 0 219px;
+}
+
+.video__inner {
+    background-image: linear-gradient(to right, #ffffff 94%, #f8f8f8 94%);
+    padding-top: 75px;
+    padding-left: 120px;
+    padding-bottom: 70px;
+    color: #222222;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video__info {
+    width: 460px;
+    padding-top: 70px;
+}
+
+.video__title {
+    font-size: 1.375em;
+    line-height: 1.750em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.video__description {
+    font-family: "Playfair Display", serif;
+    font-size: 1.625em;
+    line-height: 1.875em;
+    font-weight: 400;
+    font-style: italic;
+    width: 330px;
+}
+
+.video__text {
+    font-family: "Hind", "Arial", sans-serif;
+    line-height: 1.875em;
+    font-weight: 300;
+    color: rgb(119, 119, 119);
+}
+
+.video__play {
+    position: relative;
+}
+
+.video__button,
+.video__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* footer */
+
+.footer {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.footer__wrapper {
+    padding: 0 235px;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__link {
+    font-size: 1.125em;
+    line-height: 2.000em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+}
+
+.footer__link:hover,
+.footer__link--active {
+    color: #000000;
+    font-weight: 600;
+}
+
+.footer__form {
+    display: flex;
+    justify-content: center;    
+}
+
+.footer__input {
+    margin-left: 70px;
+    width: 410px;
+    padding: 23px 32px 22px;
+    border: 1px solid #f6f6f6;
+}
+
+.footer__button {
+    padding: 20px 21px 19px 18px;
+    border: none;
+    background-color: #83bbb6;
+    cursor: pointer;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 55px;
+    margin-bottom: 85px;
+}
+
+.footer__link-service {
+    font-size: 0.875em;
+    line-height: 1.500em;
+    font-weight: 300;
+    color: #888888;
+    margin-left: 60px;
+}
+
+.footer__line {
+    border: 1px solid #ededed;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 42px;
+}
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Hind', sans-serif;
+font-family: 'Playfair Display', serif; */
